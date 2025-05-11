@@ -1,48 +1,247 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-900 text-white">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/1?v=4" />
-  </head>
-  <body class="min-h-screen font-sans antialiased flex flex-col items-center px-4">
+    <title>Xiang-Yi | Welcome/title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=IBM+Plex+Sans+TC&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/1?v=4">
+    <style>
+      :root {
+        --bg-color: #fffaf2;
+        --text-color: #2e1f1d;
+        --accent-color: #c25559;
+        --section-bg: #f8efe8;
+        --font-main: 'Playfair Display', serif;
+        --font-sub: 'IBM Plex Sans TC', sans-serif;
+      }
 
-    <!-- Navbar -->
-    <header class="w-full max-w-4xl py-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold tracking-wide">YourName</h1>
-      <nav class="space-x-6 text-sm text-gray-300">
-        <a href="index.html" class="hover:text-white">Home</a>
-        <a href="about.html" class="hover:text-white">About</a>
-        <a href="projects.html" class="hover:text-white">Projects</a>
-        <a href="https://www.parkerchang.life" target="_blank" class="hover:text-white">Blog</a>
-      </nav>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--font-sub);
+        line-height: 1.8;
+        padding-top: 80px;
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 250, 242, 0.9);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+        z-index: 1000;
+        font-family: var(--font-main);
+      }
+
+      nav a {
+        margin: 0 15px;
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--accent-color);
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      h1 {
+        font-size: 3em;
+        font-family: var(--font-main);
+        margin-bottom: 10px;
+        color: var(--accent-color);
+      }
+
+      h2 {
+        font-size: 1.6em;
+        color: var(--accent-color);
+        border-left: 5px solid var(--accent-color);
+        padding-left: 10px;
+        margin-top: 60px;
+        font-family: var(--font-main);
+      }
+
+      section {
+        background: var(--section-bg);
+        border-radius: 14px;
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 880px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s;
+      }
+
+      section:hover {
+        transform: translateY(-4px);
+      }
+
+      ul {
+        padding-left: 20px;
+        list-style: circle;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin: 0.8em 0;
+      }
+
+      footer {
+        text-align: center;
+        margin: 80px 20px 40px;
+        font-size: 0.9em;
+        color: #7c6c6a;
+      }
+
+      .section-highlight {
+        background: linear-gradient(135deg, #fff0e5 0%, #fffdf7 100%);
+        border: 1px dashed #e4c5bd;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#intro">大概說點自己</a>
+      <a href="#arts">也許寫點東西</a>
+      <a href="#projects">可能做點專案</a>
+    </nav>
+
+    <header>
+      <h1>Hi，我是 Xiang-Yi</h1>
+      <p style="font-family: var(--font-sub); font-size: 1.2em;">一個平凡的還不賴的人</p>
     </header>
 
-    <!-- Hero Section -->
-    <main class="text-center mt-24">
-      <h2 class="text-4xl sm:text-5xl font-extrabold mb-4">Hi, I'm Your Name 👋</h2>
-      <p class="text-gray-400 text-lg sm:text-xl max-w-xl mx-auto">
-        A developer / designer / thinker who loves building elegant digital experiences.
+    <section id="intro">
+      <h2>簡介</h2>
+      <p>我是一個在科技與人文之間找平衡的人，喜歡寫詩、寫程式，也喜歡深度對話與創新探索。</p>
+    </section>
+
+    <section id="personality">
+      <h2>我的個性</h2>
+      <ul>
+        <li>對世界保有好奇、願意理解與探索不同角度</li>
+        <li>習慣反思，也習慣溫柔地行動</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>不擅長的事</h2>
+      <ul>
+        <li>應付不合理與愚蠢的事情</li>
+      </ul>
+    </section>
+
+    <section id="values" class="section-highlight">
+      <h2>價值觀</h2>
+      <ul>
+        <li>真誠吧</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>地雷</h2>
+      <ul>
+        <li>虛偽的人</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>興趣</h2>
+      <ul>
+        <li>閱讀（文學、心理學、社會學類）</li>
+        <li>動畫／影劇觀察與評論</li>
+        <li>寫東西、做 side project、散步</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>影響我的書</h2>
+      <ul>
+        <li>《流浪者之歌》</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>喜歡的音樂</h2>
+      <ul>
+        <li>喜歡的音樂人：宋冬野、那我懂你意思了、淺堤、椅子樂團</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>我的目標</h2>
+      <p>還在尋找</p>
+    </section>
+
+    <section>
+      <h2>成就</h2>
+      <ul>
+        <li>當一個好人</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>喜歡的 YouTube 頻道</h2>
+      <ul>
+        <li>陳一枝</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>一些之前做過 / 正在做的事</h2>
+      <ul>
+        <li>還在做</li>
+      </ul>
+    </section>
+
+    <section id="tech">
+      <h2>技術相關的事</h2>
+      <ul>
+        <li>寫寫程式而已</li>
+      </ul>
+    </section>
+
+    <section id="arts">
+      <h2>文藝相關的事</h2>
+      <ul>
+        <li>寫詩</li>
+      </ul>
+    </section>
+
+    <section id="qa">
+      <h2>Q&A</h2>
+      <ul>
+        <li><strong>你快樂嗎？</strong> 還行。</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>祝你身體健康、平安喜樂、幸福美滿。</p>
+      <p>
+        <a href="https://www.linkedin.com/in/xiang-yi-huang" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/passerbyK" target="_blank">GitHub</a> |
+        <a href="mailto:xiangyi.huang0213@gmail.com">Email</a>
       </p>
-      <div class="mt-6 flex justify-center space-x-4">
-        <a href="https://github.com/yourusername" target="_blank" class="text-gray-400 hover:text-white transition">
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-gray-400 hover:text-white transition">
-          LinkedIn
-        </a>
-        <a href="mailto:you@example.com" class="text-gray-400 hover:text-white transition">
-          Email
-        </a>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="mt-auto py-8 text-sm text-gray-500">
-      © 2025 Your Name. Built with ❤️ and GitHub Pages.
+      <p>&copy; 2025 Xiang-Yi</p>
     </footer>
-
   </body>
 </html>
