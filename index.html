@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Xiang-Yi | That's Me</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=IBM+Plex+Sans+TC&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/1?v=4">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/120707256?v=4">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
       :root {
         --bg-color: #fffaf2;
         --text-color: #2e1f1d;
         --accent-color: #c25559;
         --section-bg: #f8efe8;
+        --nav-bg: #fef3e7;
         --font-main: 'Playfair Display', serif;
         --font-sub: 'IBM Plex Sans TC', sans-serif;
       }
@@ -26,7 +28,7 @@
         color: var(--text-color);
         font-family: var(--font-sub);
         line-height: 1.8;
-        padding-top: 80px;
+        padding-top: 120px;
         scroll-behavior: smooth;
       }
 
@@ -35,17 +37,22 @@
         top: 0;
         left: 0;
         width: 100%;
-        background: rgba(255, 250, 242, 0.9);
+        background: var(--nav-bg);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        padding: 15px 30px;
+        padding: 10px 30px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         z-index: 1000;
         font-family: var(--font-main);
       }
 
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+
       nav a {
-        margin: 0 15px;
         color: var(--text-color);
         text-decoration: none;
         font-weight: bold;
@@ -54,6 +61,17 @@
       }
 
       nav a:hover {
+        color: var(--accent-color);
+      }
+
+      .social-icons a {
+        color: var(--text-color);
+        margin-left: 15px;
+        font-size: 1.2em;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
         color: var(--accent-color);
       }
 
@@ -120,9 +138,16 @@
   </head>
   <body>
     <nav>
-      <a href="#intro">大概說點自己</a>
-      <a href="#arts">也許寫點東西</a>
-      <a href="#projects">可能做點專案</a>
+      <div class="nav-links">
+        <a href="#intro">大概說點自己</a>
+        <a href="https://passerbyk.github.io/writing" target="_blank">也許寫點東西</a>
+        <a href="https://passerbyk.github.io/projects" target="_blank">可能做點專案</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/xiang-yi-huang" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/passerbyK" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:xiangyi.huang0213@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
     </nav>
 
     <header>
@@ -236,12 +261,8 @@
 
     <footer>
       <p>祝你身體健康、平安喜樂、幸福美滿。</p>
-      <p>
-        <a href="https://www.linkedin.com/in/xiang-yi-huang" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/passerbyK" target="_blank">GitHub</a> |
-        <a href="mailto:xiangyi.huang0213@gmail.com">Email</a>
-      </p>
       <p>&copy; 2025 Xiang-Yi</p>
     </footer>
   </body>
 </html>
+
